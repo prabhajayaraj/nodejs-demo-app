@@ -1,0 +1,14 @@
+
+{
+  "name": "nodejs-demo-app",
+  "version": "1.0.0",
+  "description": "Node.js application with GitHub Actions CI/CD",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
