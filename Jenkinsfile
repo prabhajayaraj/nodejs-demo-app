@@ -7,21 +7,16 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('Build') {
             steps {
                 checkout scm
+                bat 'docker build -t nodejs-demo-app .'
             }
         }
 
         stage('Test') {
             steps {
                 bat 'npm test'
-            }
-        }
-
-        stage('Build Docker Image') {
-            steps {
-                bat 'docker build -t nodejs-demo-app .'
             }
         }
 
